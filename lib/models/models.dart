@@ -1,27 +1,29 @@
 class TypeChamp {
   String name;
-  String label;
   List<String> options;
 
-  TypeChamp({this.name, this.label, this.options});
+  TypeChamp({this.name, this.options});
 }
 
 class TypeVariable {
-  bool isText;
-  TypeVariable({this.isText});
+  String text;
+  String boolean;
+  String number;
+  TypeVariable({this.text, this.number, this.boolean});
 }
 
 
 
 class Champ {
-  TypeChamp typeChanmp;
+  TypeChamp typeChamp;
   TypeVariable typeVariable;
-  Champ({this.typeChanmp, this.typeVariable});
+  Champ({this.typeChamp, this.typeVariable});
 }
 
 class Question {
   String intitule;
   Champ champ;
+  Question({this.intitule, this.champ});
 }
 
 class Formulaire {
